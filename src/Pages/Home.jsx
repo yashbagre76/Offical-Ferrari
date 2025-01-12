@@ -1,37 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Hero from "../Components/Hero";
 import About from "../Components/About";
-import Split from "../Components/split";
+import Split from "../Components/Split";
 import CarInfo from "../Components/CarInfo";
+import Footer from "../Components/Footer";
 
 function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => setIsLoading(false), 3000); // Adjust time as needed
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="relative h-screen">
-      {/* Navbar */}
-      <Navbar />
+    <>
+      {/* Preloader */}
+      {isLoading && (
+        <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
+          {/* Ferrari Logo */}
+          <div className="flex flex-col items-center">
+            <img
+              src="\public\logo.png" // Replace with your actual logo path
+              alt="Ferrari Logo"
+              className="w-32 h-32 animate-pulse" // Logo with a pulsing animation
+            />
+            {/* Skeleton Loader */}
+            <div className="w-24 h-4 mt-4 bg-gray-600 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      )}
 
-      {/* Hero Section */}
-      <div className="relative w-full h-full">
-        <Hero />
-      </div>
-
-      {/* Hero Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 z-10">
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 font-sans opacity-80">
-          Start Your Engine
-        </h1>
-        <p className="text-lg md:text-2xl mb-6 font-sans opacity-80">
-          Experience the thrill of speed and luxury like never before.
-        </p>
-        <button className="bg-transparent border-2 border-red-600 px-6 py-3 text-lg font-semibold rounded-full hover:bg-red-600 hover:text-white transition-all duration-300">
-          Learn More
-        </button>
-      </div>
-      <About />
-      <Split />
-      <CarInfo />
-    </div>
+      {/* Main Content */}
+      {!isLoading && (
+        <>
+          <Hero />
+          <Navbar />
+          <About />
+          <Split />
+          <CarInfo />
+          <Footer />
+        </>
+      )}
+    </>
   );
 }
 

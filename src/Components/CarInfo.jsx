@@ -29,7 +29,7 @@ function CarInfo() {
             alt="Car Model 1"
             className="w-full h-full object-cover transition-transform duration-700 ease-in-out"
           />
-          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-2 px-6 rounded-full text-xl font-semibold hover:bg-gray-800 transition-all duration-300">
+          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-2 px-6 rounded-full text-xl font-semibold hover:bg-black transition-all duration-300">
             Discover
           </button>
         </div>
@@ -50,7 +50,7 @@ function CarInfo() {
             alt="Car Model 2"
             className="w-full h-full object-cover transition-transform duration-700 ease-in-out"
           />
-          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-2 px-6 rounded-full text-xl font-semibold hover:bg-gray-800 transition-all duration-300">
+          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-2 px-6 rounded-full text-xl font-semibold hover:bg-black transition-all duration-300">
             Discover
           </button>
         </div>
@@ -71,7 +71,7 @@ function CarInfo() {
             alt="Car Model 3"
             className="w-full h-full object-cover transition-transform duration-700 ease-in-out"
           />
-          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-2 px-6 rounded-full text-xl font-semibold hover:bg-gray-800 transition-all duration-300">
+          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-2 px-6 rounded-full text-xl font-semibold hover:bg-black transition-all duration-300">
             Discover
           </button>
         </div>
@@ -92,7 +92,7 @@ function CarInfo() {
             alt="Car Model 4"
             className="w-full h-full object-cover transition-transform duration-700 ease-in-out"
           />
-          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-2 px-6 rounded-full text-xl font-semibold hover:bg-gray-800 transition-all duration-300">
+          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-2 px-6 rounded-full text-xl font-semibold hover:bg-black transition-all duration-300">
             Discover
           </button>
         </div>
